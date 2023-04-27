@@ -4,7 +4,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 
-
 User = get_user_model()
 class Profiles(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -16,3 +15,4 @@ class Profiles(models.Model):
 
     def __str__(self):
         return self.user.username
+    
