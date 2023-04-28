@@ -14,7 +14,17 @@ class Profiles(models.Model):
     branch = models.CharField(max_length=100, null=False)
 
     def __str__(self):
-        return self.user.username
+        return self.user
     
 
+class Events(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(null=True)
+    eventdate = models.DateField(null=True)
+    location = models.CharField(max_length=200, null=True)
+    lastdatetoreg = models.DateField(null=True)
+    maxparticipants = models.PositiveIntegerField(null=True)
+    poster = models.ImageField(null=True, blank=True)
 
+    def __str__(self):
+        return self.title 
