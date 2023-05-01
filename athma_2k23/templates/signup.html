@@ -11,23 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'mediastatic/assets/css/style.css' %}">
     <title>Sign up</title>
 </head>
 <body>
     <header>
-        <a href="">
-            <img src="./sources/home.png" alt="">
+        <a href="/">
+            <img src="{% static 'mediastatic/assets/images/home.png' %}" alt="">
         </a>
-        <a href="">SIGN IN</a>
+        <a href="/signin">Sign In</a>
     </header>
     <main>
         <div class="container">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <img src="sources/logo.png" alt="" id="logo">
-                <input type="text" name="name" id="" class="inputfield" placeholder="Full Name" required>
-                <input type="email" name="email" id="" class="inputfield" placeholder="Email" required>
+                <input type="text" name="name" id="" class="inputfield" placeholder="Full Name" required><br><br>
+                <input type="email" name="email" id="" class="inputfield" placeholder="Email" required><br><br>
                 <div class="dropdowns">
                     <input list="dept" name="dept" placeholder="Dept" class="spec">
                     <datalist id="dept">
@@ -44,12 +44,10 @@
                       <option value="S6">
                       <option value="S8">
                     </datalist>
-                </div>
-                
-                <input type="password" name="password" id="" class="temp3" placeholder="Password" required>
-                <input type="password" name="password2" id="" class="temp3" placeholder="Confirm Password" required>
-                <input type="number" name="phone" id="" class="inputfield" placeholder="PH." required>
-                
+                </div><br>
+                <input type="password" name="password" id="" class="inputfield" placeholder="Password" required><br><br>
+                <input type="password" name="password2" id="" class="inputfield" placeholder="Confirm Password" required><br><br>
+                <input type="number" name="phone" id="" class="inputfield" placeholder="PH." required><br><br>
                 <input type="submit" value="Submit" class="btn">
             </form>
         </div>

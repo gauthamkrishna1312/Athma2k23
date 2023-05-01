@@ -24,6 +24,7 @@ def index(request):
     
     return render(request, 'index.html', context)
 
+@login_required(login_url='signin')
 def home(request):
 
     events = Events.objects.all()

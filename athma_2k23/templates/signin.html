@@ -12,15 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="{% static 'css`/style.css' %}">
+    <link rel="stylesheet" href="{% static 'mediastatic/assets/css/style.css' %}">
     <title>Sign in</title>
 </head>
 <body>
     <header>
-        <a href="">
-            <img src="./sources/home.png" alt="">
+        <a href="/">
+            <img src="{% static 'mediastatic/assets/images/home.png' %}" alt="">
         </a>
-        <a href=""></a>
+        <a href="/signup">Sign Up</a>
     </header>
     <main>
         <div class="container">
@@ -28,10 +28,9 @@
             <form method="POST">
                 {% csrf_token %}
                 <img src="sources/logo.png" alt="" id="logo">
-                <input type="text" name="username" id="" class="inputfield" placeholder="Name" required>
+                <input type="text" name="username" id="" class="inputfield" placeholder="Name" required><br><br>
                 <input type="password" name="password" id="" class="temp2" placeholder="Password" required>                
                 <input type="submit" value="Submit" class="btn"><br>
-                <button><a href="signup">Sign Up</a></button>
             </form>
         </div> 
         

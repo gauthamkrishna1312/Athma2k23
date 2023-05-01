@@ -40,7 +40,7 @@
   
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="index"><img class="logo logo-display" src="{% static 'mediastatic/assets/images/typow.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'mediastatic/assets/images/white typo.png' %}" alt=""> </a> </div>
+        <div class="logo"> <a href="/home"><img class="logo logo-display" src="{% static 'mediastatic/assets/images/typow.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'mediastatic/assets/images/white typo.png' %}" alt=""> </a> </div>
       </div>
       <!--== End Header Navigation ==-->
 
@@ -277,7 +277,7 @@ setInterval(draw, 33);
       <div id="slider" class="row mt-50">
 
           {% for specialevent in specialevents %}
-          <input type="radio" name="slider" id="s{{specialevent.ids}}">
+          <input type="radio" name="slider" id="s{{specialevent.ids}}" checked>
           {% endfor %}
 
 
