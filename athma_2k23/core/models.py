@@ -14,7 +14,7 @@ class Profiles(models.Model):
     branch = models.CharField(max_length=100, null=False)
 
     def __str__(self):
-        return self.user
+        return self.fullname
     
 
 class Events(models.Model):
@@ -28,3 +28,13 @@ class Events(models.Model):
 
     def __str__(self):
         return self.title 
+    
+class SpecialEvents(models.Model):
+    ids = models.IntegerField(null=True, blank=True)
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(null=True)
+    eventdate = models.DateField(null=True)
+    poster = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title

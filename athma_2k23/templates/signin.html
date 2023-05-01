@@ -1,5 +1,7 @@
-<!DOCTYPE html>
 {% load static %}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,15 +25,15 @@
     <main>
         <div class="container">
     
-            <form method="POST"">
+            <form method="POST">
                 {% csrf_token %}
                 <img src="sources/logo.png" alt="" id="logo">
                 <input type="text" name="username" id="" class="inputfield" placeholder="Name" required>
                 <input type="password" name="password" id="" class="temp2" placeholder="Password" required>                
-                <!-- <p class="passpara"><a href="">Forgot password?</a> <a href="">Log in with google?</a></p> -->              
-                <input type="submit" value="Submit" class="btn">
+                <input type="submit" value="Submit" class="btn"><br>
+                <button><a href="signup">Sign Up</a></button>
             </form>
-        </div>
+        </div> 
         
         
     </main>

@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 
-from .models import Profiles, Events
+from .models import Profiles, Events, SpecialEvents
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -15,8 +15,28 @@ from .models import Profiles, Events
 def index(request):
 
     events = Events.objects.all()
+    specialevents = SpecialEvents.objects.all()
+    
+    context = {
+                'events' : events,
+                'specialevents' : specialevents
+               }
+    
+    return render(request, 'index.html', context)
 
-    return render(request, 'index.html', {'events' : events})
+def home(request):
+
+    events = Events.objects.all()
+    specialevents = SpecialEvents.objects.all()
+    profile = Profiles.objects.get(user=request.user)
+    
+    context = {
+                'events' : events,
+                'specialevents':specialevents,
+                'profile' : profile
+               }
+    
+    return render(request, 'home.html', context)
 
 def signup(request):
     if request.method == 'POST':
@@ -49,7 +69,7 @@ def signup(request):
                                                        branch = department,
                                                     )
                 new_profile.save()
-                return redirect('/')
+                return redirect('signin')
         else :
             messages.info(request, 'Password Not Matching')
             return redirect('signup')
@@ -67,7 +87,7 @@ def signin(request):
 
         if user is not None :
             auth.login(request, user)
-            return redirect('/') 
+            return redirect('home') 
         else :
             messages.info(request, 'Username or Password is unmatching')
             return redirect('signin') 
