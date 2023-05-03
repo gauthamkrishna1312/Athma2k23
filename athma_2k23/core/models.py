@@ -38,3 +38,11 @@ class SpecialEvents(models.Model):
 
     def __str__(self):
         return self.title
+    
+class About(models.Model):
+    ids = models.IntegerField(null=True, blank=True)
+    title = models.CharField(max_length=100, unique=True, null=True)
+    poster = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title

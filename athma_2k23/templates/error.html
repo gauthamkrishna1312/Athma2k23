@@ -1,0 +1,71 @@
+{% load static %}
+
+<html lang="en">
+
+  <!-- Start Head Section -->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'mediastatic/assets/css/error.css' %}">
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'mediastatic/js/jquery.teletype.js' %}"'></script>
+    
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73012219-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <!-- End Head Section -->
+
+  <!-- Begin Body Section -->
+
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="{% static 'mediastatic/assets/images/loogo.png' %}" alt="Logo">
+      </div>
+      <div class="glitch" data-text="Error 404">Error 404</div>
+      <div class="typed-text">
+        <p class="type-text" title="Hello^500 <user>\n^1000You seem lost^1000\nYou're not^800 supposed to ^600be ^500here...^3000"></p>
+        <p id="escape"></p>
+      </div>
+    </div>
+
+    <script>
+      $( function() {
+        $( '.type-text' ).each( function() {
+          var items = $( this ).attr( 'title' ) + ';' + $( this ).text();
+          $( this ).empty().attr( 'title', '' ).teletype( {
+            text: $.map( items.split( ';' ), $.trim ),
+            typeDelay: 10,
+            backDelay: 20,
+            cursor: '▋',
+            delay: 3000,
+            preserve: true,
+            prefix: '',
+            humanise: true,
+            loop: 1
+          } );
+        } );
+      } );
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('#escape').append('<a href="/">Escape</a>');
+        }, 15000);
+      });
+    </script>
+    <script src="{% static 'mediastatic/assets/js/error.js' %}"></script>
+  </body>
+
+  <!-- End Body Section -->
+</html>

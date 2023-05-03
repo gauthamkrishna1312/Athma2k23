@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 
-from .models import Profiles, Events, SpecialEvents
+from .models import Profiles, Events, SpecialEvents, About
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -23,6 +23,16 @@ def index(request):
                }
     
     return render(request, 'index.html', context)
+
+def about(request):
+    a22s = About.objects.all()
+    return render(request, 'about.html', {'a22s': a22s})
+
+def error(request):
+    return render(request, 'error.html')
+
+def team(request):
+    return render(request, 'team.html')
 
 @login_required(login_url='signin')
 def home(request):
