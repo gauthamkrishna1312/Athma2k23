@@ -16,10 +16,10 @@
   <!-- Responsive Style Sheets -->
   <link rel="stylesheet" href="{% static 'mediastatic/assets/css/responsive.css' %}">
   <!-- Revolution Style Sheets -->
-  <link rel="stylesheet" type="text/css" href="{% static 'mediastatic/revolution/css/settings.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'mediastatic/revolution/css/settings.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'mediastatic/revolution/css/team.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'mediastatic/revolution/css/navigation.css' %}">
-  
+  <link rel="stylesheet" type="text/css" href="{% static 'mediastaticPr/revolution/css/navigation.css' %}">
+
  
 
 </head>
@@ -51,8 +51,8 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i
               class="tr-icon ion-android-menu"></i> </button>
-          <div class="logo"> <a href="index.html"><img class="logo logo-display" src="assets/images/typow.png" alt="">
-              <img class="logo logo-scrolled" src="assets/images/white typo.png" alt=""> </a> </div>
+          <div class="logo"> <a href="/"><img class="logo logo-display" src="{% static 'mediastatic/assets/images/typow.png' %}" alt="">
+              <img class="logo logo-scrolled" src="{% static 'mediastatic/assets/images/white typo.png' %}" alt=""> </a> </div>
         </div>
         <!--== End Header Navigation ==-->
 
@@ -60,18 +60,17 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
 
           <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-            <li><a class="page-scroll" href="index.html">Home</a></li>
-            <li><a class="page-scroll" href="about.html">About</a></li>
-            <li><a class="page-scroll" href="index.html">Main Events</a></li>
-            <li><a class="page-scroll" href="index.html">Pre Events</a></li>
-            <li><a class="page-scroll" href="#team">Team</a></li>
-            <li><a class="page-scroll" href="index.html">FAQ</a></li>
-            <li><a class="page-scroll" href="index.html">Contact</a></li>
-            <li><a class="page-scroll" href="index.html">Login</a></li>
+            <li><a class="page-scroll" href="/">Home</a></li>
+            <li><a class="page-scroll" href="about">About</a></li>
+           
+            <li><a class="page-scroll" href="team">Team</a></li>
+          
+            
+            <li><a class="page-scroll" href="error">Login</a></li>
           </ul>
-          <ul>
+          <!-- <ul>
             <li><a href="#" id="user-button"><i class="icofont icofont-user"></i> John Doe</a></li>
-          </ul>
+          </ul> -->
 
         </div>
 
@@ -93,23 +92,16 @@
           </div>
         </div>
       </div>
-      <div class="row mt-50">
+      <div class="row mt-50" id="image-holders">
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
             <div class="team style-2 xs-mb-30 sm-mb-30">
               <div class="team-img">
-                <img src="assets/images/team/team-01.jpg" alt="">
-                <div class="social-icons-style-02">
-                  <ul class="sm-icon mt-20 mb-0">
-                    <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                    <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                    <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                    <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                  </ul>
-                </div>
+                <img src="{% static 'mediastatic/assets/images/team/adiil.png' %}" alt="">
+                
               </div>
               <div class="team-info text-center">
-                <h3>Bobby Castro</h3>
-                <span class="title default-color">Project Manager</span>
+                <h3>Adhil Hussain KK</h3>
+                <span class="title default-color"></span>
               </div>
             </div>
           </div>
@@ -117,39 +109,26 @@
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
             <div class="team style-2 xs-mb-30 sm-mb-30">
               <div class="team-img">
-                <img src="assets/images/team/team-02.jpg" alt="">
-                <div class="social-icons-style-02">
-                  <ul class="sm-icon mt-20 mb-0">
-                    <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                    <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                    <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                    <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                  </ul>
-                </div>
+                <img src="{% static 'mediastatic/assets/images/team/ifna.png' %}" alt="">
+                
               </div>
               <div class="team-info text-center">
-                <h3>Luara Prior</h3>
-                <span class="title default-color">Marketing Manager</span>
+                <h3>Ifna Ilyas</h3>
+                <span class="title default-color"></span>
               </div>
             </div>
           </div>
           <!--== Member End ==-->
+          <!--== Member End ==-->
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-delay="0.3s">
             <div class="team style-2 xs-mb-30">
               <div class="team-img">
-                <img src="assets/images/team/team-03.jpg" alt="">
-                <div class="social-icons-style-02">
-                  <ul class="sm-icon mt-20 mb-0">
-                    <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                    <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                    <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                    <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                  </ul>
-                </div>
+                <img src="{% static 'mediastatic/assets/images/team/sudheela.png' %}" alt="">
+                
               </div>
               <div class="team-info text-center">
-                <h3>Mike Jones</h3>
-                <span class="title default-color">Graphics Designer</span>
+                <h3>Sudheela Riju</h3>
+                <span class="title default-color"></span>
               </div>
             </div>
           </div>
@@ -158,23 +137,37 @@
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.4s">
             <div class="team style-2">
               <div class="team-img">
-                <img src="assets/images/team/team-04.jpg" alt="">
-                <div class="social-icons-style-02">
-                  <ul class="sm-icon mt-20 mb-0">
-                    <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                    <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                    <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                    <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                  </ul>
-                </div>
+                <img src="{% static 'mediastatic/assets/images/team/musthafa.png' %}" alt="">
+                
               </div>
               <div class="team-info text-center">
-                <h3>Heather Doe</h3>
-                <span class="title default-color">CEO Company</span>
+                <h3>Musthafa MP</h3>
+                <span class="title default-color"></span>
               </div>
             </div>
           </div>
           <!--== Member End ==-->
+          {% for team in teams %}
+          <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="team style-2 xs-mb-30 sm-mb-30">
+              <div class="team-img">
+                <img src="{{team.photo.url}}" alt="">
+                
+              </div>
+              <div class="team-info text-center">
+                <h3>{{team.name}}</h3>
+                <span class="title default-color"></span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!--== Member End ==-->
+
+      </div>
+      <div class="row mt-50">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-primary" id="see-more-btn">See More</button>
+        </div>
       </div>
 <br><br><br><br><br><br>
     </div>
@@ -193,18 +186,18 @@
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
               <div class="team style-2 xs-mb-30 sm-mb-30">
                 <div class="team-img">
-                  <img src="assets/images/team/team-01.jpg" alt="">
+                  <img src="{% static 'mediastatic/assets/images/team/arfaz.png' %}" alt="">
                   <div class="social-icons-style-02">
                     <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
+                      <li><a class="in" href="https://in.linkedin.com/in/arfazkhan"><i class="icofont icofont-linkedin"></i></a></li>
+                      <li><a class="tw" href="https://twitter.com/arfuzkhan__"><i class="icofont icofont-twitter"></i></a></li>
+                      <li><a class="in" href="#."><i class="icofont icofont-instagram"></i></a></li>
+                      
                     </ul>
                   </div>
                 </div>
                 <div class="team-info text-center">
-                  <h3>Arfaz Khan</h3>
+                  <h3>Arfaz Khan Hijas Khan</h3>
                   <span class="title default-color">Frontend Developer</span>
                 </div>
               </div>
@@ -213,13 +206,12 @@
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
               <div class="team style-2 xs-mb-30 sm-mb-30">
                 <div class="team-img">
-                  <img src="assets/images/team/team-02.jpg" alt="">
+                  <img src="{% static 'mediastatic/assets/images/team/gautham.png' %}" alt="">
                   <div class="social-icons-style-02">
                     <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
+                      <li><a class="in" href="https://www.linkedin.com/in/gautham-krishna-p-2bb4781b3/"><i class="icofont icofont-linkedin"></i></a></li>
+                      <li><a class="tw" href="https://twitter.com/Gautham90904358"><i class="icofont icofont-twitter"></i></a></li>
+                      <li><a class="in" href="https://www.instagram.com/c_tech_guy/"><i class="icofont icofont-instagram"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -233,13 +225,12 @@
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-delay="0.3s">
               <div class="team style-2 xs-mb-30">
                 <div class="team-img">
-                  <img src="assets/images/team/team-03.jpg" alt="">
+                  <img src="{% static 'mediastatic/assets/images/team/sreekanth.png' %}" alt="">
                   <div class="social-icons-style-02">
                     <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
                       <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
+                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
+                      <li><a class="in" href="#."><i class="icofont icofont-instagram"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -254,18 +245,17 @@
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.4s">
               <div class="team style-2">
                 <div class="team-img">
-                  <img src="assets/images/team/team-04.jpg" alt="">
+                  <img src="{% static 'mediastatic/assets/images/team/adeeb.png' %}" alt="">
                   <div class="social-icons-style-02">
                     <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
                       <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
+                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
+                      <li><a class="in" href="#."><i class="icofont icofont-instagram"></i></a></li>
                     </ul>
                   </div>
                 </div>
                 <div class="team-info text-center">
-                  <h3>Adeeb</h3>
+                  <h3>Adeeb Danish</h3>
                   <span class="title default-color">Backend Developer</span>
                 </div>
               </div>
@@ -274,103 +264,7 @@
         </div>
         <br><br><br><br><br><br>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title">
-              
-              <h1>Creative Team</h1>
-              <p>
-                The Creative Team of ATHMA 23 is a group of talented individuals who are passionate about delivering unique and engaging experiences through their creative skills. Comprising of skilled designers, artists, and creative thinkers, they bring innovation to the forefront of the event. This team is dedicated to making ATHMA 23 a truly unforgettable experience.   
-            </p>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-50">
-            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
-              <div class="team style-2 xs-mb-30 sm-mb-30">
-                <div class="team-img">
-                  <img src="assets/images/team/team-01.jpg" alt="">
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="team-info text-center">
-                  <h3>Arfaz Khan</h3>
-                  <span class="title default-color">Frontend Developer</span>
-                </div>
-              </div>
-            </div>
-            <!--== Member End ==-->
-            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="team style-2 xs-mb-30 sm-mb-30">
-                <div class="team-img">
-                  <img src="assets/images/team/team-02.jpg" alt="">
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="team-info text-center">
-                  <h3>Gautham Krishna P</h3>
-                  <span class="title default-color">Backend Developer</span>
-                </div>
-              </div>
-            </div>
-            <!--== Member End ==-->
-            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-delay="0.3s">
-              <div class="team style-2 xs-mb-30">
-                <div class="team-img">
-                  <img src="assets/images/team/team-03.jpg" alt="">
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="team-info text-center">
-                  <h3>Sreekanth S</h3>
-                  <span class="title default-color">Frontend Developer</span>
-                </div>
-              </div>
-            </div>
-            <!--== Member End ==-->
-  
-            <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.4s">
-              <div class="team style-2">
-                <div class="team-img">
-                  <img src="assets/images/team/team-04.jpg" alt="">
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="team-info text-center">
-                  <h3>Adeeb</h3>
-                  <span class="title default-color">Backend Developer</span>
-                </div>
-              </div>
-            </div>
-            <!--== Member End ==-->
-        </div>
-  
-      </div>
+     
 
   </div>
   <!--== Team End ==-->
@@ -382,7 +276,7 @@
           <div class="row wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-md-8 centerize-col text-center">
               <div class="footer-logo">
-                <a href="index.html"><img src="assets/images/typow.png" class="img-responsive centerize-col"
+                <a href="/"><img src="{% static 'mediastatic/assets/images/typow.png' %}" class="img-responsive centerize-col"
                     alt="Footer Logo" /></a>
               </div>
               <div class="copy-right">Made with ❤ Arfaz Khan, Sreekanth S, Gautham Krishna, Adeeb</div>
@@ -414,6 +308,21 @@
   <script src="{% static 'mediastatic/assets/js/smoothscroll.js' %}"></script>
   <script src="{% static 'mediastatic/assets/js/plugins.js' %}"></script>
   <script src="{% static 'mediastatic/assets/js/master.js' %}"></script>
+ <script>
+  $(document).ready(function() {
+    // Hide all but the first 4 image holders
+    $('#image-holders .col-md-3:gt(3)').hide();
+
+    // Toggle the visibility of the image holders when the button is clicked
+    $('#see-more-btn').click(function() {
+      $('#image-holders .col-md-3:gt(3)').toggle();
+      $(this).text(function(i, text){
+        return text === "See More" ? "See Less" : "See More";
+      })
+    });
+  });
+</script>
+
 
   <!-- Revolution js Files -->
   <script src="{% static 'mediastatic/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
